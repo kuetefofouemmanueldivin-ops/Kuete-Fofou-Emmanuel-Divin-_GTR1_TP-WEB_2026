@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact - Mon mini-site</title>
+    </head>
+    <body>
+        <h1>Page de contact</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="présentation.html">Présentation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <h2>Forulaire de contact</h2>
+        <p>Veuillez remplir ce formulaire pour envoyer un message</p>
+        <form>
+            <label for ="nom">Nom :</label>
+            <input type="text " id="nom" name="nom" placeholder="Entre votre nom">
+            <br>
+            <br>
+            <label for="prenom">Prénom :</label>
+            <input type="text"id="Prénom"name="prénom" placeholder="Entre votre prénom">
+            <br>
+            <br>
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" placeholder="exemple@email.com">
+            <br>
+            <br>
+            <label for="téléphone">Numéro de téléphone :</label>
+            <input type="téléphone" id="téléphone" name="téléphone" placeholder="XXX-XXX-XXX">
+            <br>
+            <br>
+            <label for="motif">Motif du message :</label>
+            <select id="motif" name="motif" required>
+                <option value="">--Choisir un motif--</option>
+                <option value="information">Demande d'information</option>
+                <option value="stage">Demande de stage</option>
+                <option value="projet">Proposition de projet</option>
+                <option value="autre">Autre demande</option>
+            </select>
+            <br>
+            <br>
+            <p>Statut du visiteur :</p>
+            <input type="radio" id="etudiant" name="statut" value="etudiant" required>
+            <label for="etudiant">Etudiant</label>
+            <br>
+            <input type="radio" id="Enseignant" name="statut" value="enseignant">
+            <label for="enseignant">Enseignant :</label>
+            <br>
+            <input type="radio" id="professionnel" name="statut" value="professionnel">
+            <label for="proessionnel">Professionnel :</label>
+            <br>
+            <br>
+            <label for="message">Message</label>
+            <br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Ecrivez votre message ici"required></textarea>
+            <br>
+            <br>
+            <input type="checkbox" id="confirmation" name="confirmation"required>
+            <label for="confirmation">Je confirme que les information saisies sont correctes.</label>
+            <br>
+            <br>
+            <label for="domaine">Domaine d'intèret :</label>
+            <select id="domaine" name="domaine" required>
+                <option value="">--Choisir un domaine--</option>
+                <option value="réseaux">Réseaux informatiques</option>
+                <option value="cybersecurité">Cybersécurité</option>
+                <option value="developpement-web">Développement-web</option>
+                <option value="administration-systeme">Administration-système</option>
+                <br>
+                <br>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </body>
+</html>
