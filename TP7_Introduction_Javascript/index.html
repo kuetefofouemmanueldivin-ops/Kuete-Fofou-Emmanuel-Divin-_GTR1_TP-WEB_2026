@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=""fr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Accueil - Mon mini-site</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page">
+        <header>
+        <h1>Mon mini site web</h1>
+        </header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="presentation.html">Présentation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="container">
+            <main>
+                <h2>Bienvenue</h2>
+                <p>Ce site a été amélioré avec flexbox pour une meilleure organisation.</p>
+                 <div class="carte">
+                <h2>Developpement-web</h2>
+                <p>Le developpement-web permet de créer des pages, des sites et des application accessibles depuis un naviga</p>
+            </div>
+            <div class="carte">
+                <h2>Responsive design</h2>
+                <p>Le responsive design permet d'adapter automatiquement l''affichage d'un site aux differents écrans</p>
+                </div>
+                <section class="carte">
+                    <h2>Message dynamique avec Javascript</h2>
+                    <p>Cette zone permet d'afficher un message personnalisé selon le nom et le domaine choisis.</p>
+                    <label for="nomUtilisateur">Entrez votre nom:</label>
+                    <input type="text id="nomUtilisateur" placeholder="Exemple : Emmanuel">
+                    <label for="domaineUtilisateur">choisissez votre domaine d'intèret:</label>
+                    <select id="domaineUtilisateur">
+                        <option value="">--Choisir un domaine--</option>
+                        <option value="réseaux">Réseaux informatiques</option>
+                        <option value="cybersecurité">Cybersécurité</option>
+                        <option value="developpement-web">Développement-web</option>
+                        <option value="administration-systeme">Administration-système</option>
+                    </select>
+                    <button onclick="afficherMessage()">Afficher le message</button>
+                    <p id="messageResultat"></p>
+                </section>
+            </main>
+            <aside>
+                <h2>Informations</h2>
+                <p>Cette zone peut contenir des informations supplémentaires.</p>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; 2026 - Mon mini site</p>
+        </footer>
+        </div>
+        <script>
+            function afficherMessage(){
+                let nom=document.getElementById("nomUtilisateur").value;
+                let domaine=document.getElementById("domaineUtilisateur").value;
+                let message="";
+                if(nom===""&& domaine===""){
+                    message="veuillez saisir votre nom et choisir un dommaine d'intèret.";
+                } else if(nom==="") {
+                    message="Veuillez saisir votre nom.";
+                }else if(domaine==="") {
+                    message="Veuillez choisir un domaine d'interet.";
+                }else{
+                    message="Bienvenue"+nom+"dans le cours de programmation Web.";
+                }
+                document.getElementById("messageResultat").textContent=message;
+            }
+        </script>
+    </body>
+</html>
